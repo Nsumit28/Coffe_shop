@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coffe Shop</title>
+
+        <style>
+            .Header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                top: -9px;
+                left: 0;
+                right: 0;
+                bottom: 700px;
+                background-color: white;
+                z-index: 100;   
+                position: fixed;
+                margin-top: 11px;               
+            }
+
+            .navbar{
+                display: inline-block;
+                text-align: center;
+            }
+
+            .home{
+                display: flex;
+                margin-left: -10px;
+                position:absolute;
+                z-index: 99;
+                width: 100%;
+                margin-bottom: 1000px;
+            }
+
+            :root 
+            {
+                --main-color: #443;
+                --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+                --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+                --border: 0.2rem solid var(--main-color);
+                --border-hover: 0.2rem dashed var(--main-color);
+            }
+
+
+            .btn
+            {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius:  var(--border-radius);
+                background: none;
+                border: var(--border);
+                cursor: pointer;
+                margin-top: 1rem;
+                color: var(--main-color);
+            }
+
+            .btn:hover
+            {
+                border-radius: var(--border-radius-hover);
+                border: var(--border-hover);
+            }
+
+            .coffe-image 
+            {
+                height: 25rem;
+                animation: float 4s linear infinite;
+                position: relative;
+                margin-top: 250px;
+                margin-left: 1000px;
+                z-index: 99;
+            }
+
+
+            @keyframes float
+            {
+                0%,
+                100%{
+                transform: translateY(0rem);
+                }
+                50%{
+                transform: translateY(-7rem);
+                }
+
+            }
+
+            .Content .text{
+                font-size: 6.5rem;
+                color: var(--main-color);
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+                z-index: 100;
+                top: 200px;
+                position: absolute;
+            }
+
+
+
+            h1 > span {
+                position: relative;
+                display: inline-block;
+                height: 1.25em;
+                vertical-align: bottom;
+                overflow: hidden;
+            }
+
+            h1 > span > span {
+                display: block;
+                animation: animateWords 7s infinite ease;
+            }
+
+            @keyframes animateWords {
+                0% {
+                    transform: translateY(0%);
+                }
+                
+                25% {
+                    transform: translateY(-100%);
+                }
+            }
+
+
+     </style>
+    </head>
+    <body>
+
+        <div class="Header" >
+            <div>
+            <p style="margin: 0; font-family: Poppins,sans-serif; color: rgba(68, 68, 51, 1); font-size: 32px; margin-left: 5px; margin-top: 10px;">Coffee</p>
+            </div>
+            
+
+            <div class="navbar" style="margin-top: 15px;">
+                <a href="#Home" style="text-decoration: none; color: rgba(68, 68, 51, 1); margin-right: 20px; font-size: 22px;">Home</a>
+                <a href="#About" style="text-decoration: none; color: rgba(68, 68, 51, 1); margin-right: 20px; font-size: 22px;">About</a>
+                <a href="#Menu" style="text-decoration: none; color: rgba(68, 68, 51, 1); font-size: 22px;">Menu</a>
+            </div>
+
+            <div>
+            <button class="btn" style="margin-top: 10px;">Book</button>
+            </div>
+        </div>
+
+        
+        <div class="Content"> 
+            <div>
+                <h1 class="text">RISE AND 
+                    <span>
+                        <span>SHINE</span>
+                        <span>SMILE</span>
+                    </span>
+                </h1>
+                <p style="z-index: 100; top: 320px; width: 800px; left: 15px; position: absolute;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum nunc nulla, non lacinia risus tempor vel. In auctor libero ac nulla eleifend, eleifend efficitur nulla pharetra. Sed feugiat quam vel lacus commodo consectetur. Vivamus lacinia dapibus leo, vel eleifend nunc. Pellentesque quis dolor ut arcu placerat pellentesque. Etiam a eleifend felis. Pellentesque lobortis finibus mi eget dignissim. Etiam ut rutrum urna. Sed lacus lorem, interdum nec placerat eget, ornare vel augue. Etiam sodales, purus id dignissim eleifend, arcu lectus dapibus nisi, non commodo orci eros eu arcu. Integer ut finibus lacus.<br>
+
+                    <br>Curabitur ut lorem sed ex vulputate elementum eget eu mauris. Maecenas vitae nisl non ex fermentum faucibus. Vestibulum ac elit nec nisl aliquet lacinia. Sed efficitur sollicitudin arcu, et varius tortor tempor et. Nam ullamcorper ligula vel diam ultricies rhoncus. Aliquam eget justo id metus tincidunt vulputate aliquam et justo. Donec at est quis dui elementum euismod. Nulla egestas mauris quis dapibus convallis.</p>
+                <img src="home-bg.jpg" class="home">
+            </div>
+           
+           
+           <div class="image">
+            <img src="home-img-1.png" class="coffe-image">
+           </div>
+        </div>
+
+        
+    </body>
+</html>
